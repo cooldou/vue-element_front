@@ -1,0 +1,154 @@
+.three-model-height100 {
+  height: 100%;
+}
+.cesium-viewer-bottom{
+  display: none !important;
+}
+
+.three-model-container{
+  position: relative;
+  height: 100%;
+  .logo-container{
+    z-index: 10;
+    position: absolute;
+    padding: 0 10px;
+    img{
+      height: 80px;
+    }
+  }
+
+  .buttons-container{
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    // background: rgba(255, 255, 255, .4);
+    background: transparent;
+    padding: 10px 15px;
+    .el-input {
+      width: 200px;
+      margin-right: 10px;
+      font-size: 12px;
+      input {
+        line-height: 30px;
+        height: 30px;
+      }
+    }
+    .el-button+.el-button {
+      margin-left: 0;
+      border-radius: 0;
+    }
+    .el-button {
+      height: 30px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 1px 3px 3px 0px rgba(0,0,0,.5);
+      // box-shadow: 0px 2px 3px 0px rgba(0,0,0,.2);
+      &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      &:last-child {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+    }
+  }
+
+  .ol-popup {
+    position: absolute;
+    // color: black;
+    // background: rgba(255, 255, 255, 0.5);
+    display: block;
+    z-index: 1;
+    border: 2px solid white;
+    border-radius: 2px;
+    color: white;
+    font-size: 14px;
+    // padding-left: 10px;
+    box-sizing: border-box;
+    font-weight: 900;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 250px;
+  }
+  .ol-popup:after {
+    top: 100%;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    content: "";
+    height: 100px;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    left: 30px;
+  }
+  .ol-popup:before {
+    border-width: 0px;
+  }
+  .popup-content {
+    // width: 120px;
+    // height: 30px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 10px 10px;
+    >div {
+      display: flex;
+      >div {
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0px;
+        }
+        &:first-child {
+          width: 120px;
+        }
+      }
+      .number-content {
+        font-weight: 900;
+        font-size: 13px;
+      }
+      .number-normal {
+        color: #67C23A;
+      }
+      .number-warn {
+        color: #F7454A;
+      }
+      .number-early {
+        color: #F49E41;
+      }
+    }
+  }
+
+  .ol-camera {
+    border: 0;
+    border-radius: 0px;
+    padding-left: 0px;
+    font-size: 12px;
+    font-weight: 500;
+    box-sizing: border-box;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    width: 60px;
+    .buttons-container {
+      position: absolute;
+      padding: 0;
+      display: flex;
+      bottom: -15px;
+      left: -30px;
+      width: 60px;
+      display: none;
+    }
+    &:hover {
+      .buttons-container {
+        display: flex;
+      }
+    }
+  }
+
+  .video-container {
+    height: 1px;
+    width: 1px;
+    position: fixed;
+  }
+}
